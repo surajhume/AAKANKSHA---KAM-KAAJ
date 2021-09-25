@@ -38,15 +38,24 @@ body{
   transform: translateY(-50%);
 }
 
+#tablecard{
+  border-radius: 15px;
+}
+#pm{
+  text-align: center;
+  border-radius: 10px;
+	background: rgb(78, 78, 255);
+	padding: 20px;
+	color: white;
+}
 
+table tr td{
+	max-width: 500px;
+}
 
-
-
-
-
-
-
-
+#featuresSection{
+  justify-content: space-evenly;
+}
 
 .dhanu{
   float: left;
