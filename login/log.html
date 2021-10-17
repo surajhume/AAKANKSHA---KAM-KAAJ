@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 
 <html>
 <head>
@@ -7,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SignUp and Login</title>
-	<link rel="stylesheet"  href="{% static 'css/index.css' %}">
+	<link rel="stylesheet"  href="log.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
- <img src="{% static 'images/logo.jpg' %}">
+ <img src=unnamed.jpg>
     <div class="body">
         <div class="container" id="container">
             <div class="form-container sign-up-container">
@@ -118,99 +117,6 @@
 		container2.classList.remove("right-panel-active2");
 	});
 </script>
-<script>
 
-		$(document).on('click', '#companysignup', function(){
-			$companyname = $('#company_name').val();
-            $companynumber = $('#company_number').val();
-            if ($companyname == "" || $companynumber == "") {
-                alert("Please complete the required field");
-            } else {
-                $companymail = $('#company_mail').val();
-                $companypass = $('#company_pass').val();
-                $.ajax({
-                    url: '{% url 'companysignup' %}',
-                    type: 'POST',
-                    data: {
-                        companyname: $companyname,
-                        companypass: $companypass,
-                        companynumber: $companynumber,
-                        companymail: $companymail,
-                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
-                    },
-                    success: function(data){
-                    	$('#company_name').val('');
-            			$('#company_number').val('');
-            			$('#company_mail').val('');
-                		$('#company_pass').val('');
-                        alert('Created!');
-                    }
-                });
-            }
-        });
-
-        $(document).on('click', '#companylogin', function(){
-        	$cmail = $("#cmail").val();
-        	$cpass = $("#cpass").val();
-        	if ($cmail== "" || $cpass == ""){
-        		alert("Please Fill all required Fields");
-        	}
-        	else{
-        		$.ajax({
-        			url: '{% url 'companylogin' %}',
-        			type: 'POST',
-        			data: {cmail: $cmail, cpass: $cpass},
-        			success: function(data){
-        					alert("Login Successfully!");
-							window.location = "company/" + data.name  ;
-        			}
-        		});
-        	}
-        });
-
-        $(document).on('click', '#internsignup', function(){
-			$internname = $('#intern_name').val();
-            $internnumber = $('#intern_number').val();
-            if ($internname == "" || $internnumber == "") {
-                alert("Please complete the required field");
-            } else {
-                $internmail = $('#intern_mail').val();
-                $internpass = $('#intern_pass').val();
-                $.ajax({
-                    url: '{% url 'internsignup' %}',
-                    type: 'POST',
-                    data: {
-                        internname: $internname,
-                        internpass: $internpass,
-                        internnumber: $internnumber,
-                        internmail: $internmail,
-                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
-                    },
-                    success: function(data){
-                        alert('Created!');
-                    }
-                });
-            }
-        });
-
-        $(document).on('click', '#internlogin', function(){
-        	$imail = $("#imail").val();
-        	$ipass = $("#ipass").val();
-        	if ($imail== "" || $ipass == ""){
-        		alert("Please Fill all required Fields");
-        	}
-        	else{
-        		$.ajax({
-        			url: '{% url 'internlogin' %}',
-        			type: 'POST',
-        			data: {imail: $imail, ipass: $ipass},
-        			success: function(data){
-        					alert("Login Successfully!");
-							window.location = "intern/" + data.name  ;
-        			}
-        		});
-        	}
-        });
-</script>
 </body>
 </html>
