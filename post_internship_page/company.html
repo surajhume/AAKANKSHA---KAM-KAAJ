@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="company.css">
+    <title>Post A JOB Requirement</title>
+</head>
+<body>
+    <!-- NAVBAR  -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">AAKANKSHA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0 ml-auto">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <div class="profile mx-2">
+              <img src="profile.png" alt="Profile">
+          </div>
+        </div>
+      </nav>
+      <!-- BODY  -->
+    <div class="container my-5">  
+        <form> 
+      <div class="form-group form-inline">
+        <label for="inputCompanyDescription">Company Description : &nbsp;</label>
+        <input type="text" class="form-control" id="inputCompanyDescription">
+      </div>
+      <div class="form-group form-inline">
+        <label for="inputProjectDescription">Project Description : &nbsp;</label>
+        <input type="text" class="form-control" id="inputProjectDescription">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="inputResponsibilities">Responsibilities</label>
+            <textarea class="form-control" id="inputResponsibilities" rows="3"></textarea>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputSkills">Qualification/ Skills</label>
+            <textarea class="form-control" id="inputSkills" rows="3"></textarea>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputBenifits">Benifits/ Perks</label>
+            <textarea class="form-control" id="inputBenifits" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="form-group form-inline">
+        <label for="inputCost">Company's Project Completion Cost : &nbsp;</label>
+        <input type="text" class="form-control" id="inputCost">
+      </div>
+      <div class="form-group">
+        <label for="inputDocument">Upload any project related document : &nbsp;</label>
+        <input type="file"  id="inputDocument">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6 form-inline">
+            <label for="inputStartDate">Project Start Date : &nbsp;</label>
+            <input type="date" class="form-control" id="inputStartDate">
+          </div>
+          <div class="form-group col-md-6 form-inline">
+            <label for="inputEndDate">Project Completion Date : &nbsp;</label>
+            <input type="date" class="form-control" id="inputEndDate">
+          </div>
+      </div>
+      <div class="form-group form-inline">
+        <label for="inputContactInfo">Company Contact Info, Website, Social Media Links : &nbsp;</label>
+        <input type="text" class="form-control" id="inputContactInfo">
+      </div>
+      <div class="form-group form-inline">
+        <label for="inputsuggestion">Feedback/ Suggestion : &nbsp;</label>
+        <input type="text" class="form-control" id="inputsuggestion">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form> 
+
+    </div>
+</body>
+</html>

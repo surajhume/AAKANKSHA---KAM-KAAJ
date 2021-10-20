@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    height: 8vh;
+    border-bottom: 1px solid black;
+    background-color: hsl(196, 100%, 16%, 0.8);
+    color: white;
+}
+nav .navbar-collapse .profile img{
+width: 3vw;
+height: 4vh;
+border-radius: 12px;
+}
