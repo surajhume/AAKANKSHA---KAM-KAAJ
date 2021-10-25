@@ -280,4 +280,6 @@ footer i{
    background:#999;
     }
 }
-  
+  #message,#loginMessage{
+	  color:#FF4B2B;
+  }

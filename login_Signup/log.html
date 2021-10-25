@@ -14,21 +14,25 @@
     <div class="body">
         <div class="container" id="container">
             <div class="form-container sign-up-container">
-                <form action="">
+                <form  id="campany-signup-form">
 	                <h1>Company</h1>
-	                <input type="text" placeholder="Company Name" id="company_name">
-	                <input type="number" placeholder="Contact Number" id="company_number">
-	                <input type="email" name="email" placeholder="Email" id="company_mail">
-	                <input type="password" name="password" placeholder="Password" id="company_pass">
-	                <button id="companysignup" type="button">SignUp</button>
+	                <input type="text" placeholder="Company Name" id="company_name" required>
+	                <input type="number" placeholder="Contact Number" id="company_number" required>
+	                <input type="email" name="email" placeholder="Email" id="company_mail" required>
+	                <input type="password" name="password" placeholder="Password" id="company_pass" required>
+					<input type="text" name="address" placeholder="Address" id="company_address" required >
+	                <input type="text" name="website" placeholder="Website" id="company_website" required>
+					<span id="message"></span>
+	                <button id="companysignup" >SignUp</button>
                 </form>
             </div>
             <div class="form-container sign-in-container">
-	            <form action="#">
+	            <form id="campany-login-form">
 		            <h1>Login</h1>
 		            <br>
 	                <input type="email" name="email" placeholder="Email" id="cmail">
 	                <input type="password" name="password" placeholder="Password" id="cpass">
+					<span id="loginMessage"></span>
 	                <button id="companylogin" type="button">Login</button>
 	            </form>
             </div>
@@ -93,6 +97,7 @@
 </div>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="../login_Signup/login_signUp.js"></script>
 <script type="text/javascript">
 	const signUpButton = document.getElementById('signUp');
 	const signInButton = document.getElementById('signIn');
@@ -117,6 +122,5 @@
 		container2.classList.remove("right-panel-active2");
 	});
 </script>
-
 </body>
 </html>
